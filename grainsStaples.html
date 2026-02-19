@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart | Grocery Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header class="main-header">
+
+    <!-- Empty left space (for proper centering) -->
+    <div class="header-left"></div>
+
+    <!-- Center Logo -->
+    <div class="logo-section">
+        <img src="logo3.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="goToCart()">
+        🛒 Cart
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Fruits</a></li>
+        <li>
+            <a href="vegetables.html">Vegetables</a>
+        </li>
+        <li><a href="dairy.html">Dairy</a></li>
+        <li><a href="grainsStaples.html">Grains & Staples</a></li>
+        <li><a href="spicesMasala.html">Spices & Masala</a></li>
+        <li><a href="beverages.html">Beverages</a></li>
+        <li><a href="snacksPackagedFood.html">Snacks & Packaged Food</a></li>
+        <li><a href="personalCare.html">Personal Care</a></li>
+        <li><a href="householdCleaning.html">Household & Cleaning</a></li>
+    </ul>
+</nav>
+
+<section class="w3-container w3-margin-top">
+<div class="product-grid">
+
+<!-- Whole Wheat Atta -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/WholeWheatAtta.png">
+<span class="price-badge">₹350/5kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Whole Wheat Atta <br>(5 kg)</h4>
+<p class="product-desc">High-quality, finely milled atta ideal for daily rotis and chapatis</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty1')">-</button>
+<span id="qty1">0</span>
+<button onclick="increase('qty1')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Whole Wheat Atta (5 kg)',350,'qty1')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Sona Masoori Raw Rice -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/SonaMasooriRawRice.png">
+<span class="price-badge">₹700/10kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Sona Masoori Rice <br>(10 kg)</h4>
+<p class="product-desc">Light, aromatic rice with medium grains</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty2')">-</button>
+<span id="qty2">0</span>
+<button onclick="increase('qty2')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Sona Masoori Raw Rice (10 kg)',700,'qty2')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Toor Dal (Arhar Dal) -->
+<div class="product-col">
+<div class="w3-card product-card out-of-stock">
+<div class="image-container">
+<img src="images/ToorDal.png">
+<span class="price-badge">₹700/5kg</span>
+<span class="stock-badge out-stock">Out of Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Toor Dal <br/>(5 kg)</h4>
+<p class="product-desc">Split pigeon peas, rich in protein - a staple in Indian households</p>
+
+<div class="quantity-box">
+<button disabled>-</button>
+<span id="qty3">0</span>
+<button disabled>+</button>
+</div>
+
+<button class="add-btn" disabled>
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Ragi (Finger Millet) (1 kg) -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Ragi.png">
+<span class="price-badge">₹80/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Ragi <br> (1 kg)</h4>
+<p class="product-desc">Gluten-free whole grain loaded with calcium and fiber</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty4')">-</button>
+<span id="qty4">0</span>
+<button onclick="increase('qty4')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Ragi (Finger Millet) (1 kg)',80,'qty4')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Jowar (Sorghum) (1 kg) -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Jowar.png">
+<span class="price-badge">₹40/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Jowar (Sorghum) <br>(1 kg)</h4>
+<p class="product-desc">Nutritious millet rich in protein and dietary fiber</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty5')">-</button>
+<span id="qty5">0</span>
+<button onclick="increase('qty5')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Jowar (Sorghum) (1 kg)',40,'qty5')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>Fresh Mart</h3>
+            <p>Your trusted online grocery store delivering fresh fruits, vegetables,
+            and daily essentials at affordable prices.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Customer Support</h4>
+            <p>📍 Fresh Mart, Karol Bagh, Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 support@freshmart.com</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2026 Fresh Mart - Grocery Store | All Rights Reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<script src="script.js"></script>
+</body>
+</html>

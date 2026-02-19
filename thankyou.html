@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thank You</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header class="main-header">
+
+    <!-- Empty left space (for proper centering) -->
+    <div class="header-left"></div>
+
+    <!-- Center Logo -->
+    <div class="logo-section">
+        <img src="logo3.png" alt="Logo" class="logo">
+    </div>
+
+   <div class="cart-icon" onclick="goBack()">
+    ← Back to Store
+</div>
+
+
+</header>
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Fruits</a></li>
+        <li>
+            <a href="vegetables.html">Vegetables</a>
+        </li>
+        <li><a href="dairy.html">Dairy</a></li>
+        <li><a href="grainsStaples.html">Grains & Staples</a></li>
+        <li><a href="spicesMasala.html">Spices & Masala</a></li>
+        <li><a href="beverages.html">Beverages</a></li>
+        <li><a href="snacksPackagedFood.html">Snacks & Packaged Food</a></li>
+        <li><a href="personalCare.html">Personal Care</a></li>
+        <li><a href="householdCleaning.html">Household & Cleaning</a></li>
+    </ul>
+</nav>
+
+<section class="w3-container w3-padding-32 w3-center viewInvoice">
+
+    <div class="w3-panel w3-green w3-round-large w3-padding-24">
+    <h2>✔ Order Successfully Placed!</h2>
+    <p>We appreciate your purchase.</p>
+</div>
+
+
+    <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+    <p><strong>Date:</strong> <span id="orderDate"></span></p>
+    <p><strong>Payment Method:</strong> <span id="orderPayment"></span></p>
+
+    <br>
+
+    <button class="add-btn" onclick="goToInvoice()">
+        View Invoice
+    </button>
+
+    <button class="add-btn w3-margin-left" onclick="goBack()">
+        Continue Shopping
+    </button>
+
+</section>
+
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>Fresh Mart</h3>
+            <p>Your trusted online grocery store delivering fresh fruits, vegetables,
+            and daily essentials at affordable prices.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Customer Support</h4>
+            <p>📍 Fresh Mart, Karol Bagh, Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 support@freshmart.com</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2026 Fresh Mart - Grocery Store | All Rights Reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<script src="script.js"></script>
+
+<script>
+    if (!localStorage.getItem("lastOrder")) {
+    window.location.href = "index.html";
+}
+
+    loadThankYou();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart | Grocery Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header class="main-header">
+
+    <!-- Empty left space (for proper centering) -->
+    <div class="header-left"></div>
+
+    <!-- Center Logo -->
+    <div class="logo-section">
+        <img src="logo3.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="goToCart()">
+        🛒 Cart
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Fruits</a></li>
+        <li>
+            <a href="vegetables.html">Vegetables</a>
+        </li>
+        <li><a href="dairy.html">Dairy</a></li>
+        <li><a href="grainsStaples.html">Grains & Staples</a></li>
+        <li><a href="spicesMasala.html">Spices & Masala</a></li>
+        <li><a href="beverages.html">Beverages</a></li>
+        <li><a href="snacksPackagedFood.html">Snacks & Packaged Food</a></li>
+        <li><a href="personalCare.html">Personal Care</a></li>
+        <li><a href="householdCleaning.html">Household & Cleaning</a></li>
+    </ul>
+</nav>
+
+<section class="w3-container w3-margin-top">
+<div class="product-grid">
+
+<!-- Face Wash (100 ml) -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/FaceWash.png">
+<span class="price-badge">₹150/0.1L</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Face Wash <br>(100 ml)</h4>
+<p class="product-desc">Gentle daily facial cleanser for removing dirt and excess oil</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty1')">-</button>
+<span id="qty1">0</span>
+<button onclick="increase('qty1')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Face Wash (100 ml)',150,'qty1')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Shampoo (200 ml) -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Shampoo.png">
+<span class="price-badge">₹180/0.2L</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Shampoo <br>(200 ml)</h4>
+<p class="product-desc">Hair cleansing shampoo that helps keep hair clean and fresh</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty2')">-</button>
+<span id="qty2">0</span>
+<button onclick="increase('qty2')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Shampoo (200 ml)',180,'qty2')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Bath Soap (125 g) -->
+<div class="product-col">
+<div class="w3-card product-card out-of-stock">
+<div class="image-container">
+<img src="images/BathSoap.png">
+<span class="price-badge">₹50/0.125kg</span>
+<span class="stock-badge out-stock">Out of Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Bath Soap <br>(125 g)</h4>
+<p class="product-desc">Basic bathing soap bar for full-body cleansing</p>
+
+<div class="quantity-box">
+<button disabled>-</button>
+<span id="qty3">0</span>
+<button disabled>+</button>
+</div>
+
+<button class="add-btn" disabled>
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Aloe Vera Lotion (200 ml) -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/AloeVeraLotion.png">
+<span class="price-badge">₹180/0.2L</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Aloe Vera Lotion <br>(200 ml)</h4>
+<p class="product-desc">Moisturizing body lotion with aloe vera extract</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty4')">-</button>
+<span id="qty4">0</span>
+<button onclick="increase('qty4')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Aloe Vera Lotion (200 ml)',180,'qty4')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Amla Hair Oil (200 ml) -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/AmlaHairOil.png">
+<span class="price-badge">₹90/0.2L</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Amla Hair Oil <br>(200 ml)</h4>
+<p class="product-desc">Hair oil with amla extract for nourishing the scalp</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty5')">-</button>
+<span id="qty5">0</span>
+<button onclick="increase('qty5')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Amla Hair Oil (200 ml)',90,'qty5')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>Fresh Mart</h3>
+            <p>Your trusted online grocery store delivering fresh fruits, vegetables,
+            and daily essentials at affordable prices.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Customer Support</h4>
+            <p>📍 Fresh Mart, Karol Bagh, Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 support@freshmart.com</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2026 Fresh Mart - Grocery Store | All Rights Reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<script src="script.js"></script>
+</body>
+</html>

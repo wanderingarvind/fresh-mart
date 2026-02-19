@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart | Grocery Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header class="main-header">
+
+    <!-- Empty left space (for proper centering) -->
+    <div class="header-left"></div>
+
+    <!-- Center Logo -->
+    <div class="logo-section">
+        <img src="logo3.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="goToCart()">
+        🛒 Cart
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Fruits</a></li>
+        <li>
+            <a href="vegetables.html">Vegetables</a>
+        </li>
+        <li><a href="dairy.html">Dairy</a></li>
+        <li><a href="grainsStaples.html">Grains & Staples</a></li>
+        <li><a href="spicesMasala.html">Spices & Masala</a></li>
+        <li><a href="beverages.html">Beverages</a></li>
+        <li><a href="snacksPackagedFood.html">Snacks & Packaged Food</a></li>
+        <li><a href="personalCare.html">Personal Care</a></li>
+        <li><a href="householdCleaning.html">Household & Cleaning</a></li>
+    </ul>
+</nav>
+
+<section class="w3-container w3-margin-top">
+<div class="product-grid">
+
+<!-- Potato -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Potato.png">
+<span class="price-badge">₹30/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Potato (1 kg)</h4>
+<p class="product-desc">Starchy and versatile tuber used in curries, snacks, and sides</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty1')">-</button>
+<span id="qty1">0</span>
+<button onclick="increase('qty1')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Potato (1 kg)',30,'qty1')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Onion -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Onion.png">
+<span class="price-badge">₹28/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Onion (1 kg)</h4>
+<p class="product-desc">Essential culinary bulb adding sweetness and aroma to cooking</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty2')">-</button>
+<span id="qty2">0</span>
+<button onclick="increase('qty2')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Onion (1 kg)',28,'qty2')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Tomato (OUT OF STOCK) -->
+<div class="product-col">
+<div class="w3-card product-card out-of-stock">
+<div class="image-container">
+<img src="images/Tomato.png">
+<span class="price-badge">₹30/kg</span>
+<span class="stock-badge out-stock">Out of Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Tomato (1 kg)</h4>
+<p class="product-desc">Juicy and tangy vegetable used in gravies, salads, and sauces</p>
+
+<div class="quantity-box">
+<button disabled>-</button>
+<span id="qty3">0</span>
+<button disabled>+</button>
+</div>
+
+<button class="add-btn" disabled>
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Capsicum -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Capsicum.png">
+<span class="price-badge">₹56/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Capsicum (1 kg)</h4>
+<p class="product-desc">Crisp and mildly sweet vegetable rich in vitamins</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty4')">-</button>
+<span id="qty4">0</span>
+<button onclick="increase('qty4')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Capsicum (1 kg)',56,'qty4')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Beetroot -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Beetroot.png">
+<span class="price-badge">₹40/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Beetroot (1 kg)</h4>
+<p class="product-desc">Sweet, earthy root used in salads, soups, and juices</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty5')">-</button>
+<span id="qty5">0</span>
+<button onclick="increase('qty5')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Beetroot (1 kg)',40,'qty5')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+<!-- Bitter Gourd -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/BitterGourd.png">
+<span class="price-badge">₹40/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Bitter Gourd (1 kg)</h4>
+<p class="product-desc">Healthy green gourd with a characteristic bitter taste</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty6')">-</button>
+<span id="qty6">0</span>
+<button onclick="increase('qty6')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Bitter Gourd (1 kg)',40,'qty6')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Bottle Gourd -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/BottleGourd.png">
+<span class="price-badge">₹35/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Bottle Gourd (1 kg)</h4>
+<p class="product-desc">Soft and tender gourd common in curries and sabzis</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty7')">-</button>
+<span id="qty7">0</span>
+<button onclick="increase('qty7')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Bottle Gourd (1 kg)',35,'qty7')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+<!-- Cabbage -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Cabbage.png">
+<span class="price-badge">₹30/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Cabbage (1 kg)</h4>
+<p class="product-desc">Crunchy, leafy vegetable used in stir-fries, salads, and parathas</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty8')">-</button>
+<span id="qty8">0</span>
+<button onclick="increase('qty8')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Cabbage (1 kg)',30,'qty8')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Carrot -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/Carrot.png">
+<span class="price-badge">₹28/kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Carrot (1 kg)</h4>
+<p class="product-desc">Sweet, crisp root ideal for salads, cooking, and soups</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty9')">-</button>
+<span id="qty9">0</span>
+<button onclick="increase('qty9')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Carrot (1 kg)',28,'qty9')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+<!-- Cauliflower (OUT OF STOCK) -->
+<div class="product-col">
+<div class="w3-card product-card out-of-stock">
+<div class="image-container">
+<img src="images/Cauliflower.png">
+<span class="price-badge">₹45/kg</span>
+<span class="stock-badge out-stock">Out of Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Cauliflower (1 kg)</h4>
+<p class="product-desc">Compact white florets ideal for curries, parathas, and stir-fries</p>
+
+<div class="quantity-box">
+<button disabled>-</button>
+<span id="qty10">0</span>
+<button disabled>+</button>
+</div>
+
+<button class="add-btn" disabled>
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>Fresh Mart</h3>
+            <p>Your trusted online grocery store delivering fresh fruits, vegetables,
+            and daily essentials at affordable prices.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Customer Support</h4>
+            <p>📍 Fresh Mart, Karol Bagh, Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 support@freshmart.com</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2026 Fresh Mart - Grocery Store | All Rights Reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<script src="script.js"></script>
+</body>
+</html>

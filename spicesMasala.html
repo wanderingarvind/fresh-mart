@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart | Grocery Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header class="main-header">
+
+    <!-- Empty left space (for proper centering) -->
+    <div class="header-left"></div>
+
+    <!-- Center Logo -->
+    <div class="logo-section">
+        <img src="logo3.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="goToCart()">
+        🛒 Cart
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Fruits</a></li>
+        <li>
+            <a href="vegetables.html">Vegetables</a>
+        </li>
+        <li><a href="dairy.html">Dairy</a></li>
+        <li><a href="grainsStaples.html">Grains & Staples</a></li>
+        <li><a href="spicesMasala.html">Spices & Masala</a></li>
+        <li><a href="beverages.html">Beverages</a></li>
+        <li><a href="snacksPackagedFood.html">Snacks & Packaged Food</a></li>
+        <li><a href="personalCare.html">Personal Care</a></li>
+        <li><a href="householdCleaning.html">Household & Cleaning</a></li>
+    </ul>
+</nav>
+
+<section class="w3-container w3-margin-top">
+<div class="product-grid">
+
+<!-- Turmeric Powder (Haldi) – 200g -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/TurmericPowder.png">
+<span class="price-badge">₹48/0.2kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Turmeric Powder <br>(200 g)</h4>
+<p class="product-desc">Premium-quality finely ground turmeric with strong aroma</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty1')">-</button>
+<span id="qty1">0</span>
+<button onclick="increase('qty1')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Turmeric Powder (200 g)',48,'qty1')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Red Chilli Powder -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/RedChilliPowder.png">
+<span class="price-badge">₹72/0.2kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Red Chilli Powder <br>(200 g)</h4>
+<p class="product-desc">Bright red chilli powder made from sun-dried chillies</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty2')">-</button>
+<span id="qty2">0</span>
+<button onclick="increase('qty2')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Red Chilli Powder (200 g)',72,'qty2')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Coriander Powder -->
+<div class="product-col">
+<div class="w3-card product-card out-of-stock">
+<div class="image-container">
+<img src="images/CorianderPowder.png">
+<span class="price-badge">₹55/0.2kg</span>
+<span class="stock-badge out-stock">Out of Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Coriander Powder <br/>(200 g)</h4>
+<p class="product-desc">Freshly ground coriander seeds with mild citrus flavor</p>
+
+<div class="quantity-box">
+<button disabled>-</button>
+<span id="qty3">0</span>
+<button disabled>+</button>
+</div>
+
+<button class="add-btn" disabled>
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Garam Masala -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/GaramMasala.png">
+<span class="price-badge">₹85/0.1kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Garam Masala <br> (100 g)</h4>
+<p class="product-desc">Aromatic blend of premium Indian spices.</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty4')">-</button>
+<span id="qty4">0</span>
+<button onclick="increase('qty4')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Garam Masala (100 g)',85,'qty4')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- Cumin Seeds -->
+<div class="product-col">
+<div class="w3-card product-card">
+<div class="image-container">
+<img src="images/CuminSeeds.png">
+<span class="price-badge">₹110/0.2kg</span>
+<span class="stock-badge in-stock">In Stock</span>
+</div>
+
+<div class="product-info">
+<h4>Cumin Seeds <br>(200 g)</h4>
+<p class="product-desc">Whole cumin seeds with strong earthy aroma</p>
+
+<div class="quantity-box">
+<button onclick="decrease('qty5')">-</button>
+<span id="qty5">0</span>
+<button onclick="increase('qty5')">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCart('Cumin Seeds (200 g)',110,'qty5')">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>Fresh Mart</h3>
+            <p>Your trusted online grocery store delivering fresh fruits, vegetables,
+            and daily essentials at affordable prices.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Customer Support</h4>
+            <p>📍 Fresh Mart, Karol Bagh, Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 support@freshmart.com</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2026 Fresh Mart - Grocery Store | All Rights Reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<script src="script.js"></script>
+</body>
+</html>

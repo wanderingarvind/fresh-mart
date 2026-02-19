@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fresh Mart | Grocery Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header class="main-header">
+
+    <!-- Empty left space (for proper centering) -->
+    <div class="header-left"></div>
+
+    <!-- Center Logo -->
+    <div class="logo-section">
+        <img src="logo3.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="goToCart()">
+        🛒 Cart
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Fruits</a></li>
+        <li>
+            <a href="vegetables.html">Vegetables</a>
+        </li>
+        <li><a href="dairy.html">Dairy</a></li>
+        <li><a href="grainsStaples.html">Grains & Staples</a></li>
+        <li><a href="spicesMasala.html">Spices & Masala</a></li>
+        <li><a href="beverages.html">Beverages</a></li>
+        <li><a href="snacksPackagedFood.html">Snacks & Packaged Food</a></li>
+        <li><a href="personalCare.html">Personal Care</a></li>
+        <li><a href="householdCleaning.html">Household & Cleaning</a></li>
+    </ul>
+</nav>
+
+<section class="w3-container w3-padding-32 contact-section">
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+
+        <p>If you have any questions, feedback, or need assistance, feel free to reach out.</p>
+        
+        <h3>Send Us a Message</h3>
+
+<form id="contactForm" class="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="formMessage" class="form-message"></p>
+</form>
+
+
+    </div>
+</section>
+
+<!-- FOOTER START -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>Fresh Mart</h3>
+            <p>Your trusted online grocery store delivering fresh fruits, vegetables,
+            and daily essentials at affordable prices.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Customer Support</h4>
+            <p>📍 Fresh Mart, Karol Bagh, Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 support@freshmart.com</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2026 Fresh Mart - Grocery Store | All Rights Reserved</p>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<script src="script.js"></script>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop page reload
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const formMessage = document.getElementById("formMessage");
+
+    // Simple validation
+    if (name === "" || email === "" || message === "") {
+        formMessage.style.color = "red";
+        formMessage.textContent = "Please fill in all fields.";
+        return;
+    }
+
+    // Email validation regex
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        formMessage.style.color = "red";
+        formMessage.textContent = "Please enter a valid email address.";
+        return;
+    }
+
+    // Simulate successful submission
+    formMessage.style.color = "green";
+    formMessage.textContent = "Thank you! Your message has been sent successfully.";
+
+    // Clear form
+    document.getElementById("contactForm").reset();
+});
+</script>
+
+</body>
+</html>
