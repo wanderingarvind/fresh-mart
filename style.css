@@ -109,6 +109,44 @@ table th, table td {
 }
 
 /* ===============================
+   NAV INNER (MENU + CART MOBILE)
+================================= */
+
+.nav-inner {
+    display: none;
+}
+
+/* Mobile Layout */
+@media (max-width: 992px) {
+
+    .nav-inner {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .mobile-cart {
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 20px;
+        position: relative;
+    }
+
+    .mobile-cart:hover {
+        opacity: 0.8;
+    }
+
+    /* Hide desktop header cart */
+    .main-header .cart-icon {
+        display: none;
+    }
+
+}
+
+
+/* ===============================
    PRODUCT GRID
 ================================= */
 

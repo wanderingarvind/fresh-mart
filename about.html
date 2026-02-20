@@ -28,15 +28,25 @@
 
 </header>
 
-
 <!-- Navigation -->
 <nav class="navbar">
 
-    <!-- Hamburger Button (Mobile Only) -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰ Menu
+    <div class="nav-inner">
+
+        <!-- Left: Hamburger -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰ Menu
+        </div>
+
+        <!-- Right: Cart (Mobile Only) -->
+        <div class="mobile-cart" onclick="goToCart()">
+            🛒
+            <span id="cartCount" class="cart-badge">0</span>
+        </div>
+
     </div>
 
+    <!-- Menu Links -->
     <ul class="menu" id="mobileMenu">
         <li><a href="index.html">Fruits</a></li>
         <li><a href="vegetables.html">Vegetables</a></li>
@@ -48,6 +58,7 @@
         <li><a href="personalCare.html">Personal Care</a></li>
         <li><a href="householdCleaning.html">Household & Cleaning</a></li>
     </ul>
+
 </nav>
 
 <section class="w3-container w3-padding-32 about-section">
