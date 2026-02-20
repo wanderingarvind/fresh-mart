@@ -181,6 +181,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// ================= MOBILE MENU TOGGLE =================
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+}
 // ======================================
 // RUN ON PAGE LOAD
 // ======================================
