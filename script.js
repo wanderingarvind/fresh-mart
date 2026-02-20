@@ -134,8 +134,8 @@ function loadInvoice() {
         invoiceBody.innerHTML +=
             "<tr>" +
             "<td>" + item.name + "</td>" +
-            "<td>" + item.quantity + "</td>" +
-            "<td>₹" + item.price.toFixed(2) + "</td>" +
+            // "<td>" + item.quantity + "</td>" +
+            "<td>₹" + item.price.toFixed(2) + " x " + item.quantity +"</td>" +
             "<td>₹" + total.toFixed(2) + "</td>" +
             "</tr>";
     }

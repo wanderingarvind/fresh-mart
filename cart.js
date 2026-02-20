@@ -29,8 +29,8 @@ function loadCart() {
         cartBody.innerHTML +=
             "<tr>" +
             "<td>" + item.name + "</td>" +
-            "<td>₹" + item.price.toFixed(2) + "</td>" +
-            "<td>" + item.quantity + "</td>" +
+            "<td>₹" + item.price.toFixed(2) + " x " + item.quantity +"</td>" +
+            // "<td>" + item.quantity + "</td>" +
             "<td>₹" + total.toFixed(2) + "</td>" +
             "<td>" +
             "<button class='add-btn remove-btn' onclick='removeItem(" + i + ")'>Remove</button>" +
