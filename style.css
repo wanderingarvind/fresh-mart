@@ -31,26 +31,21 @@ table th, table td {
 }
 
 
-
 /* ===============================
    NAVIGATION MENU
 ================================= */
 
 .navbar {
     background-color: #2e7d32;
-    padding: 0;
 }
 
+/* Desktop Menu */
 .menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-.menu li {
-    margin: 0;
 }
 
 .menu li a {
@@ -65,28 +60,53 @@ table th, table td {
 .menu li a:hover {
     background-color: #1b5e20;
 }
-/* Active Menu Link */
+
 .menu li a.active {
     background-color: #1b5e20;
     font-weight: bold;
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #000;
 }
 
-/* Hamburger button (hidden on desktop) */
+/* Hide mobile top bar on desktop */
+.nav-inner {
+    display: none;
+}
+
+/* Hide hamburger by default */
 .menu-toggle {
     display: none;
-    background-color: #2e7d32;
-    color: white;
-    padding: 14px 18px;
-    cursor: pointer;
-    font-size: 18px;
-    text-align: left;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
-
+/* ================= MOBILE VIEW ================= */
 @media (max-width: 992px) {
 
+    /* Show mobile top bar */
+    .nav-inner {
+        display: flex;
+        justify-content: space-between;   /* KEY FIX */
+        align-items: center;
+        padding: 12px 15px;
+        background-color: #2e7d32;
+    }
+
+    /* Hamburger LEFT */
+    .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Cart RIGHT */
+    .mobile-cart {
+        display: block;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* Hide desktop menu */
     .menu {
         display: none;
         flex-direction: column;
@@ -94,57 +114,20 @@ table th, table td {
         background-color: #2e7d32;
     }
 
+    .menu.show {
+        display: flex;
+    }
+
     .menu li {
         text-align: center;
         border-top: 1px solid rgba(255,255,255,0.2);
     }
 
-    .menu.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* ===============================
-   NAV INNER (MENU + CART MOBILE)
-================================= */
-
-.nav-inner {
-    display: none;
-}
-
-/* Mobile Layout */
-@media (max-width: 992px) {
-
-    .nav-inner {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0 15px;
-    }
-
-    .mobile-cart {
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        margin-left: 20px;
-        position: relative;
-    }
-
-    .mobile-cart:hover {
-        opacity: 0.8;
-    }
-
-    /* Hide desktop header cart */
+    /* Hide desktop cart */
     .main-header .cart-icon {
         display: none;
     }
-
 }
-
 
 /* ===============================
    PRODUCT GRID
