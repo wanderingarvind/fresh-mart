@@ -81,9 +81,13 @@ function updateCartCount() {
     }
 
     let badge = document.getElementById("cartCount");
+    let badge2 = document.getElementById("cartCount2");//mobile version
 
     if (badge) {
         badge.innerText = totalItems;
+    }
+    if (badge2) {
+        badge2.innerText = totalItems;
     }
 }
 
