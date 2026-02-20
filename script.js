@@ -186,6 +186,31 @@ function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     menu.classList.toggle("show");
 }
+
+// ===============================
+// AUTO ACTIVE MENU LINK
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const links = document.querySelectorAll(".menu li a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        // If homepage (root), treat as index.html
+        if (currentPage === "" && linkPage === "index.html") {
+            link.classList.add("active");
+        }
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+});
+
 // ======================================
 // RUN ON PAGE LOAD
 // ======================================

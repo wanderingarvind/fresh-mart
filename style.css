@@ -35,7 +35,6 @@ table th, table td {
 /* ===============================
    NAVIGATION MENU
 ================================= */
-/* ================= NAVIGATION ================= */
 
 .navbar {
     background-color: #2e7d32;
@@ -60,10 +59,17 @@ table th, table td {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 .menu li a:hover {
     background-color: #1b5e20;
+}
+/* Active Menu Link */
+.menu li a.active {
+    background-color: #1b5e20;
+    font-weight: bold;
+    border-bottom: 3px solid #000000;
 }
 
 /* Hamburger button (hidden on desktop) */
@@ -113,10 +119,37 @@ table th, table td {
     padding: 20px;
 }
 
+/* Desktop Default */
 .product-col {
-    flex: 1 1 200px;
+    flex: 1 1 220px;
     max-width: 240px;
-    margin: 5px;
+    margin: 10px;
+}
+
+/* ===============================
+   TABLET VIEW (2 per row)
+================================= */
+@media (max-width: 992px) {
+    .product-col {
+        flex: 1 1 45%;
+        max-width: 45%;
+        margin: 10px;
+    }
+}
+
+/* ===============================
+   MOBILE VIEW (1 per row FULL WIDTH)
+================================= */
+@media (max-width: 576px) {
+    .product-grid {
+        padding: 10px;
+    }
+
+    .product-col {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
 
 /* ===============================
@@ -499,7 +532,7 @@ footer {
 
 /* Cart Badge */
 .cart-badge {
-    background-color: red;
+    background-color: black;
     color: white;
     font-size: 12px;
     font-weight: bold;
