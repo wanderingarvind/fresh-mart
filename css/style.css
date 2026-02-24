@@ -276,6 +276,18 @@ table td {
     color: #555;
 }
 
+/* ===============================
+   DULL IMAGE FOR OUT OF STOCK
+================================= */
+
+.product-card.out-of-stock .image-container img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+.product-card.out-of-stock .price-badge {
+    background-color: #999 !important;
+    opacity: 0.6;
+}
 
 /* =====================================================
    6. QUANTITY SECTION
@@ -518,7 +530,7 @@ table td {
     .logo-section {
         position: static;
         transform: none;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
     }
 
     .cart-icon {
