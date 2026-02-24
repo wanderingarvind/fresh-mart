@@ -1,0 +1,389 @@
+/* ======================================================
+   1. GLOBAL / BASIC SETTINGS
+====================================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    letter-spacing: 1px;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ======================================================
+   2. HEADER SECTION
+====================================================== */
+
+.main-header {
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 40px;
+    position: relative;
+}
+
+/* Left empty space (balances cart width) */
+.header-left {
+    width: 120px;
+}
+
+/* Center Logo */
+.logo-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-badge {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50px;
+    margin-left: 6px;
+}
+
+/* ======================================================
+   3. NAVIGATION BAR
+====================================================== */
+
+.navbar {
+    background-color: #2e7d32;
+}
+
+/* Desktop Menu */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 14px 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: #1b5e20;
+}
+
+/* Hide mobile elements by default */
+.nav-inner,
+.menu-toggle {
+    display: none;
+}
+
+/* ======================================================
+   4. PRODUCT GRID LAYOUT
+====================================================== */
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-col {
+    flex: 1 1 220px;
+    max-width: 240px;
+    margin: 10px;
+}
+
+/* ======================================================
+   5. PRODUCT CARD DESIGN
+====================================================== */
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Image Container (Square Shape) */
+.image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-container img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+/* Price & Stock Badges */
+.price-badge,
+.stock-badge {
+    position: absolute;
+    top: 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+.price-badge {
+    right: 10px;
+    background: #4CAF50;
+}
+
+.stock-badge {
+    left: 10px;
+}
+
+.in-stock {
+    background: #4CAF50;
+}
+
+.out-stock {
+    background: #f44336;
+}
+
+/* Out of Stock Effect */
+.product-card.out-of-stock img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+/* ======================================================
+   6. PRODUCT INFO SECTION
+====================================================== */
+
+.product-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Quantity Buttons */
+.quantity-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-box button {
+    padding: 6px 14px;
+    margin: 0 8px;
+    border: none;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.quantity-box span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+.add-btn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #388E3C;
+}
+
+/* Remove Button */
+.remove-btn {
+    background: #f44336;
+}
+
+/* ======================================================
+   7. CART TABLE
+====================================================== */
+
+.cart-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+.cart-table th {
+    background: #4CAF50;
+    color: white;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ======================================================
+   8. FOOTER
+====================================================== */
+
+.footer {
+    background: #1b5e20;
+    color: white;
+    padding: 40px 0 0 0;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    min-width: 220px;
+    margin: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section a:hover {
+    color: #a5d6a7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #145a18;
+}
+
+/* ======================================================
+   9. RESPONSIVE DESIGN
+====================================================== */
+
+/* Tablet View */
+@media (max-width: 992px) {
+
+    .product-col {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    /* Show mobile nav bar */
+    .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background: #2e7d32;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .cart-icon {
+        display: none;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+
+    .product-col {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Fix header for mobile */
+    .main-header {
+        padding: 25px 15px;
+        flex-direction: column;
+    }
+
+    .logo-section {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .logo {
+        height: 110px;
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
