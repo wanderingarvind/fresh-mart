@@ -300,6 +300,13 @@ table td {
     width: 250px;
 }
 
+/* Thank you page: viewInvoice Button Special */
+.viewInvoice button:first-of-type {
+    background-color: #2196F3 !important;
+}
+.viewInvoice button:first-of-type:hover {
+    background-color: #1976D2 !important;
+}
 
 /* =====================================================
    10. INVOICE BOX
@@ -311,7 +318,57 @@ table td {
     background: white;
     padding: 25px;
 }
+.container-text-align {
+  text-align: center; /* Centers inline-level children horizontally */
+}
+.bill-details {
+    text-align: right;
+    margin-top: 20px;
+}
+/* Button Special */
+.invoice-box button:first-of-type {
+    background-color: #2196F3 !important;
+}
+.invoice-box button:first-of-type:hover {
+    background-color: #1976D2 !important;
+}
 
+/* ======================================
+   PRINT ONLY INVOICE BOX
+====================================== */
+/* Hide logo on screen */
+.print-only {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .invoice-box, .invoice-box * {
+        visibility: visible;
+    }
+
+    .invoice-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Show logo only in print */
+    .print-only {
+        display: block !important;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Hide print button */
+    #printBtn {
+        display: none !important;
+    }
+}
 
 /* =====================================================
    11. FOOTER
