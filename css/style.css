@@ -753,30 +753,27 @@ footer {
 @media (max-width: 768px) {
 
     .main-header {
-        padding: 25px 15px;     /* Reduce vertical space */
+        padding: 30px 15px;     /* Reduce height */
         flex-direction: column;
         justify-content: center;
-        position: relative;
     }
 
-    /* Remove absolute positioning for mobile */
+    /* Remove absolute centering */
     .logo-section {
         position: static;
         transform: none;
-        margin-bottom: 15px;    /* Increase gap between logo and navbar */
         text-align: center;
+        margin-bottom: 10px;   /* small gap before navbar */
     }
 
     .logo {
-        height: 150px;          /* Proper proportional size for mobile */
-        max-width: 90%;
+        height: 130px;         /* Bigger logo */
+        max-width: 95%;
     }
 
-    /* Hide desktop cart in header */
     .cart-icon {
-        display: none;
+        display: none;         /* hide desktop cart */
     }
-
 }
 
 
