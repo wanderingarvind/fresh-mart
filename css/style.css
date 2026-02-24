@@ -768,7 +768,7 @@ footer {
     }
 
     .logo {
-        height: 110px;          /* Proper proportional size for mobile */
+        height: 150px;          /* Proper proportional size for mobile */
         max-width: 90%;
     }
 
